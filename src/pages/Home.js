@@ -107,11 +107,13 @@ export default class Home extends Component {
 
             } else {
               notifyError(`API error: ${request.status}`);
+              
 
             }
 
           } catch (error) {
               notifyError(`Ha ocurrido un error, intente más tarde`);
+            
           }
         this.setState({loading: false});
 

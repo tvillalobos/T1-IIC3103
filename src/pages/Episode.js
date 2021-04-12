@@ -72,12 +72,15 @@ export default class Episode extends Component {
 
             } else {
             notifyError(`API error: ${request.status}`);
+            this.props.history.push("/");
             return request.status;
+            
 
             }
 
           } catch (error) {
               notifyError(`Ha ocurrido un error, intente más tarde`);
+              this.props.history.push("/");
               return false;
           }
 
