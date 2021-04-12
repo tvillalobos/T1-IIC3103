@@ -47,7 +47,7 @@ export default function SimpleAccordion(props) {
         <div id="seasons-accordion" className={classes.root}>
           <Accordion >
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon color="inherit" />}
               aria-controls="panel1a-content"
               id={props.serie === "bb"? "panel1a":"panel2a"}
             >
