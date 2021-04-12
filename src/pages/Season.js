@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Acordion from '../components/Acordion2'
 import { css } from "@emotion/core";
 import ClipLoader from "react-spinners/ClipLoader";
+import Container from '@material-ui/core/Container';
 
 const override = css`
   display: block;
@@ -95,7 +96,7 @@ export default class BBSeason extends Component {
 
     render() {
         return (
-            <div>
+            <Container id="bbCon">
                 
                 {this.state.loading===false?
                 <Acordion history={this.props.history} serie={this.state.series[this.state.serie].abrev} title={"Temporada" + this.state.season} seasons={this.state.episodes} />:
@@ -106,7 +107,7 @@ export default class BBSeason extends Component {
                 loading={this.state.loading}
                 id="loader"
          />}
-            </div>
+            </Container>
         )
     }
 }

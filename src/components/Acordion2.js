@@ -37,15 +37,15 @@ export default function SimpleAccordion(props) {
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
-              id="panel1a-header"
+              id="panel1a"
             >
-              <Typography className={classes.heading}>Episodios {props.title}</Typography>
+              <Typography id="ac-title" className={classes.heading}>Episodios {props.title}</Typography>
             </AccordionSummary>
             {props.seasons.map(function(e, idx){
              return (
                 <AccordionDetails key={idx} className="seasonLabel" onClick={()=>handleClick(e.episode_id)} >
                 <Typography >
-                  {`Episodio ${e.episode_id}: ${e.title}`}
+                  {`Episodio ${idx+1}: ${e.title}`}
                 </Typography>
               </AccordionDetails>
     

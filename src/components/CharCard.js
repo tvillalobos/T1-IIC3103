@@ -80,12 +80,12 @@ export default function MediaCard(props) {
           <Typography variant="body2" color="textSecondary" component="p">
             Apariciones Breaking Bad: {c.appearance.map((s,idx)=>{
                 return <span onClick={()=>handleClick("bb",s)} id="seasonLink1" key={idx}>{s}</span> 
-            })}
+            })} {c.appearance.length?"":"Ninguna"}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Apariciones Better Call Saul: {c.better_call_saul_appearance.map((s,idx)=>{
                 return <span onClick={()=>handleClick("bcs",s)} id="seasonLink2" key={idx}>{s}</span> 
-            })}
+            })} {c.better_call_saul_appearance.length?"":"Ninguna"}
           </Typography>
         </CardContent>
      

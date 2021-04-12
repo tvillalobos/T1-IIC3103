@@ -48,22 +48,22 @@ export default function SimpleCard(props) {
   const e = props.episode;
   if (e){
     return (
-        <Card className={classes.root}>
+        <Card id="panel3a" className={classes.root}>
           <CardContent>
-            <Typography className={classes.title} color="textSecondary" gutterBottom>
-            Fecha lanzamiento: {e.air_date}
+            <Typography id="ac-title" className={classes.title} color="textSecondary" gutterBottom>
+            Fecha: {e.air_date.split("T")[0]}
             </Typography>
-            <Typography variant="h5" component="h2">
+            <Typography id="ac-title" variant="h5" component="h2">
             Título: {e.title}
             </Typography>
-            <Typography className={classes.pos} color="textSecondary">
+            <Typography id="ac-title" className={classes.pos} color="textSecondary">
               Número capítulo: {e.episode_id}
             </Typography>
-            <Typography variant="body2" component="p">
+            <Typography id="ac-title" variant="body2" component="p">
               Temporada {e.season}
     
             </Typography>
-            <Typography variant="h6" component="h3">
+            <Typography id="ac-title" variant="h6" component="h3">
             Personajes
             </Typography>
           </CardContent>

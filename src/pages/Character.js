@@ -9,6 +9,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { FormatListBulleted, TramRounded } from '@material-ui/icons';
 import Card from './../components/CharCard';
 import Avatar from '@material-ui/core/Avatar';
+import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
 
@@ -122,6 +123,7 @@ export default class Character extends Component {
         
         return (
             
+            <Container>
             <div className="pageDiv">
                 {this.state.loading===false?
                 <div className="charDiv">
@@ -133,7 +135,7 @@ export default class Character extends Component {
                   return <div key={idx} className="quoteDiv">
                     {`"${q.quote}"`}
                   </div>
-                })}
+                })} {this.state.quotes.length?"": <h4>Ninguna</h4>}
                 </div>
 
                </div>:
@@ -147,6 +149,7 @@ export default class Character extends Component {
             }
                 
             </div>
+            </Container>
           
           
         )

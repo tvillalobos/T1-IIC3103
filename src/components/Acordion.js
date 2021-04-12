@@ -44,14 +44,14 @@ export default function SimpleAccordion(props) {
   }
   if (props.seasons){
     return (
-        <div className={classes.root}>
-          <Accordion>
+        <div id="seasons-accordion" className={classes.root}>
+          <Accordion >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
-              id="panel1a-header"
+              id={props.serie === "bb"? "panel1a":"panel2a"}
             >
-              <Typography className={classes.heading}>{props.title}</Typography>
+              <Typography id="ac-title" className={classes.heading}>{props.title}</Typography>
             </AccordionSummary>
             {props.seasons.map(function(s, idx){
              return (

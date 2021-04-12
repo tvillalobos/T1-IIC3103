@@ -9,6 +9,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 import { FormatListBulleted, TramRounded } from '@material-ui/icons';
 import Card from './../components/Card';
 import Avatar from '@material-ui/core/Avatar';
+import Container from '@material-ui/core/Container';
 
 // {
 //     "episode_id": 1,
@@ -154,7 +155,7 @@ export default class Episode extends Component {
             try{
                 const characters = this.state.characters;
                 return (
-                    <div>
+                    <div className="walterjr">
                     {this.state.episode.characters.map(function(c, idx){
                         return (
                             <div className="avatarGroup" onClick={()=>handler(characters[c])} key={idx}>
@@ -184,7 +185,7 @@ export default class Episode extends Component {
         
         return (
             
-            <div>
+            <Container>
                 {this.state.loading===false?
                 <div>
                 <Card episode={this.state.episode}> </Card>
@@ -200,7 +201,7 @@ export default class Episode extends Component {
           />
             }
                 
-            </div>
+            </Container>
           
           
         )

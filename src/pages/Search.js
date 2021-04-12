@@ -48,6 +48,7 @@ export default class Search extends Component {
              loading: true,
              characters: [],
              change: false,
+             pages: new Array(100).fill(0),
 
 
         }
@@ -56,9 +57,44 @@ export default class Search extends Component {
 
 
 
-   async fetchURL(url){
-    
+    asyncForEach = async (array, callback) => {
+      
+        let list = [];
+        let aux = [];
+        for (let index = 0; index < array.length; index++) {
 
+        console.log("Pagina:", index, "personajes:", (index+1)*10);
+        
+          list = await callback(index);
+          if(list.length===0){
+            console.log("PARE!:");
+              break;
+          }
+
+          aux = aux.concat(list);
+          
+          }
+        this.setState({characters: aux})
+        return true;
+      
+    }
+
+
+   fetchURL= async (n)=>{
+    
+    let params = this.props.location.search.split("=");
+
+    const name = params[1];
+    let url = ""
+    if(n===0){
+        url = `${API_BASE}characters?name=${name}`;
+
+    }else{
+        url = `${API_BASE}characters?name=${name}&offset=${n*10}&limit=${n*10}`;
+    }
+
+
+    
     try {
         const request = await fetch(url, {
           method: 'GET',
@@ -98,14 +134,9 @@ export default class Search extends Component {
     //     window.location.reload(false);
     //   }
     async onRouteChanged() {
-        let params = this.props.location.search.split("=");
-
-        const name = params[1];
-        const url = `${API_BASE}characters?name=${name}`;
 
         this.setState({loading: true});
-        const chars = await this.fetchURL(url);
-        this.setState({characters: chars});
+        const chars = await this.asyncForEach(this.state.pages, this.fetchURL)
         this.setState({loading: false});
     }
 
@@ -114,15 +145,11 @@ export default class Search extends Component {
    async  componentDidMount (){
 
         
-        let params = this.props.location.search.split("=");
 
-        const name = params[1];
-        const url = `${API_BASE}characters?name=${name}`;
 
-        this.setState({loading: true});
-        const chars = await this.fetchURL(url);
-        this.setState({characters: chars});
-        this.setState({loading: false});
+    this.setState({loading: true});
+    const chars = await this.asyncForEach(this.state.pages, this.fetchURL)
+    this.setState({loading: false});
   
         
 
@@ -174,7 +201,7 @@ export default class Search extends Component {
         return (
             
             
-            <Container>
+            <Container id="search-con">
                 {this.state.loading===false?
                 <div>
                 <Typography variant="h3" component="h3">

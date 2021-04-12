@@ -4,6 +4,11 @@
   --secundary: #09493d;
 }
 
+/* body{
+  background-image: url("https://i.ibb.co/xC2tbRG/Captura-de-Pantalla-2021-04-12-a-la-s-03-32-26.png");
+  background-repeat: repeat;
+
+} */
 .App {
   text-align: center;
 }
@@ -67,7 +72,6 @@
   display: flex;
   width: 100%;
 
-  overflow: scroll;
   margin: 0 auto;
 
   margin-top: 0.8rem;
@@ -90,7 +94,7 @@
 }
 
 .quotesDiv{
- 
+  margin-left: 2%;
   width: 60%;
 }
 
@@ -165,10 +169,16 @@
 }
 
 .charsDiv{
-  margin-top: 1%;
+  margin-top: 2%;
   margin: 0 auto;
   align-items: center;
   text-align: center;
+  overflow: scroll;
+  max-height: 600px;
+  
+
+  
+  
 
 }
 
@@ -185,4 +195,48 @@
   padding-bottom: 3%;
   
   
+}
+
+#bb-img{
+  margin: 0 auto;
+  height: 200px;
+}
+
+#bcs-img{
+  margin: 0 auto;
+  height: 205px;
+}
+
+#ac-title{
+  color: white;
+}
+
+#panel1a{
+  background-color: var(--secundary);
+}
+
+#panel3a{
+  background-color: var(--secundary);
+  margin-top: 3%;
+}
+
+#panel2a{
+  background-color: #535E66;
+}
+
+
+.imgGroup{
+  margin-top: 3%;
+  display: flex;
+}
+
+.walterjr{
+  background-color: white;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+
+#bbCon{
+  margin-top: 3%;
 }

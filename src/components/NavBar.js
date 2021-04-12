@@ -122,7 +122,8 @@ export default function SearchAppBar() {
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
-          <Button onClick={handleClick} color="inherit" >Buscar</Button>
+          <Button disabled={!name.length}
+          onClick={handleClick} color="inherit" >Buscar</Button>
         </Toolbar>
       </AppBar>
     </div>
