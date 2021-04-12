@@ -57,7 +57,7 @@ export default function SimpleCard(props) {
             Título: {e.title}
             </Typography>
             <Typography id="ac-title" className={classes.pos} color="textSecondary">
-              Número capítulo: {e.episode_id}
+              ID capítulo: {e.episode_id}
             </Typography>
             <Typography id="ac-title" variant="body2" component="p">
               Temporada {e.season}
