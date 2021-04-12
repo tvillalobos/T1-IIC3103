@@ -5,4 +5,4 @@
 
 - Link de la página: https://t1-savewalterwhite.herokuapp.com
 - Para esta tarea se utilizaron componentes de [Material UI](https://material-ui.com/)
-- En caso de ser necesario, se puede realizar la búsqueda de todos los personajes ingresando a la ruta http://t1-savewalterwhite.herokuapp.com/search?name=
+- En caso de ser necesario, se puede realizar la búsqueda de todos los personajes ingresando a la ruta https://t1-savewalterwhite.herokuapp.com/search?name=
