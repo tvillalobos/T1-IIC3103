@@ -1,4 +1,5 @@
 Tarea 1 Taller de Integración
 
 
-![pollos.png](https://blog-eeuu.com/wp-content/uploads/2018/08/breaking-bad-logo.jpeg =250x)
+<img src="https://blog-eeuu.com/wp-content/uploads/2018/08/breaking-bad-logo.jpeg" alt="pollos.png" width="250"/>
+
