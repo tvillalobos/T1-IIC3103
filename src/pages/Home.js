@@ -132,7 +132,7 @@ export default class Home extends Component {
               <Acordion history={this.props.history} data={this.state.bb} serie={"bb"} title="Temporadas Breaking Bad" seasons={this.state.bb.seasons} />
               </div>
               <div className="imgGroup">
-              <img id="bcs-img" alt="Better Call Saul.png" src="https://poptaim.com/wp-content/uploads/2020/05/bts2-900x600.jpg"/>
+              <img id="bcs-img" alt="Better Call Saul.png" src="https://seriesonday.com/wp-content/uploads/2020/01/Better-Call-Saul-estrena-tra%CC%81iler-para-su-quinta-temporada-seriesonday.png"/>
               <Acordion history={this.props.history} data={this.state.bcs} serie={"bcs"} title="Temporadas Better Call Saul" seasons={this.state.bcs.seasons} />
               </div>
               </div>:
